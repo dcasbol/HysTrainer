@@ -1,0 +1,19 @@
+# Data folder.
+# Download from: github.com/Motiva/vtkESQuiData
+data/
+
+# Python precompilated
+*.pyc
+
+# Temporary files
+*~
+build/
+dist/
+
+# Editor project files
+*.sublime-project
+*.sublime-workspace
+
+# System files
+.DS_Store
+Thumbs.db

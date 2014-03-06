@@ -1,0 +1,119 @@
+<!DOCTYPE Simulation SYSTEM 'srml.dtd'>
+<Simulation Name='vis-notxtr' Type='EndoscopyCamera' UseHaptic='1' Verbose='1' RenderRate='40' SimulationRate='40' HapticRate='40' Gravity='0.0 -9.81 0.0' DataPath='./data/' Debug='1'>
+	<Haptic Name='SBM' Type='SBM' NumberOfTools='1'>
+	</Haptic>
+	<Collision>
+	</Collision>
+	<Scenario Name='simple_col_scenario'>
+		<Environment Name='simple_col_environment' Ambient='0.0 0.0 0.0' Background='1.0 1.0 1.0'>
+			<Cameras Name='CameraCollection'>
+				<Camera Id='0' Name='Camera' Position='0.0 0.0 6.0' FocalPoint='0.0 0.0 -6.0' Orientation='0.0 0.0 0.0' ViewAngle='60' ParallelProjection='0' Yaw='0' Elevation='0' Pitch='0' Dolly='0'>
+				</Camera>
+			</Cameras>
+			<Lights Name='LightCollection'>
+				<Light Id='0' Name='Environment' LightType='Camera' Positional='1' Intensity='0.5' AmbientColor='0.0 0.0 0.0' DiffuseColor='1.0 1.0 1.0' SpecularColor='0.0 0.0 0.0' ConeAngle='120'>
+				</Light>
+				<Light Id='1' Name='CameraLight' LightType='Head' Positional='1' Intensity='1.0' AmbientColor='0 0.1 0.1' DiffuseColor='1.0 1.0 1.0' SpecularColor='0.5 0.5 1.0' ConeAngle='15'>
+				</Light>
+			</Lights>
+		</Environment>
+		<Objects Name='Default'>
+			<Object Type='Organ' Status='Visible' Id='0' Name='cavity'>
+				<Elements>
+					<Element Type='Organ' Status='Visible' Id='0' Name='cavity_el' Scale='0.25 0.25 1.0' Origin='0.0 0.0 0.0' Orientation='0.0 0.0 0.0' Position='0.0 0.0 -20.0'>
+						<Models>
+							<Model Type='Visualization' Status='Visible' Id='0' Name='cavity_vis' FileName='Scenario/Organs/cavity_tubular_thin_vis.vtp' Color='1.0 1.0 1.0' Opacity='1.0' Visibility='1' TextureFileName='Scenario/Textures/stomach.jpg'>
+							</Model>
+							<Model Type='Collision' Status='Visible' Id='1' Name='cavity_col' FileName='Scenario/Organs/cavity_tubular_thin_col.vtp' Color='1.0 1.0 1.0' Opacity='0.0' Visibility='0'>
+							</Model>
+						</Models>
+					</Element>
+				</Elements>
+			</Object>
+			<Object Type='Organ' Status='Visible' Id='1' Name='cylinder-0'>
+				<Elements>
+					<Element Type='Organ' Status='Visible' Id='0' Name='cylinder-0-el' Scale='1.0 1.0 1.0' Origin='0.0 0.0 0.0' Orientation='0.0 0.0 20.0' Position='-1.0 -0.25 0.0'>
+						<Models>
+							<Model Type='Visualization' Status='Visible' Id='0' Name='cylinder-0_vis' FileName='Scenario/Tools/Brush/brush_halfs_col.vtp' Color='1.0 1.0 1.0' Opacity='1.0' Visibility='1' TextureFileName='Scenario/Textures/liver.jpg'>
+							</Model>
+							<Model Type='Collision' Status='Visible' Id='1' Name='cylinder-0_col' FileName='Scenario/Tools/Brush/brush_halfs_col.vtp' Color='1.0 1.0 1.0' Opacity='0.0' Visibility='0'>
+							</Model>
+						</Models>
+					</Element>
+				</Elements>
+			</Object>
+			<Object Type='Organ' Status='Visible' Id='1' Name='cylinder-00'>
+				<Elements>
+					<Element Type='Organ' Status='Visible' Id='0' Name='cylinder-00-el' Scale='1.0 1.0 1.0' Origin='0.0 0.0 0.0' Orientation='0.0 0.0 -20.0' Position='1.15 0.0 -2.0'>
+						<Models>
+							<Model Type='Visualization' Status='Visible' Id='0' Name='cylinder-00_vis' FileName='Scenario/Tools/Brush/brush_halfs_col.vtp' Color='1.0 1.0 1.0' Opacity='1.0' Visibility='1' TextureFileName='Scenario/Textures/liver.jpg'>
+							</Model>
+							<Model Type='Collision' Status='Visible' Id='1' Name='cylinder-00_col' FileName='Scenario/Tools/Brush/brush_halfs_col.vtp' Color='1.0 1.0 1.0' Opacity='0.0' Visibility='0'>
+							</Model>
+						</Models>
+					</Element>
+				</Elements>
+			</Object>
+			<Object Type='Organ' Status='Visible' Id='2' Name='cylinder-1'>
+				<Elements>
+					<Element Type='Organ' Status='Visible' Id='0' Name='cylinder-0-el' Scale='1.0 1.0 1.0' Origin='0.0 0.0 0.0' Orientation='0.0 0.0 -80.0' Position='-0.4 1.15 -4.0'>
+						<Models>
+							<Model Type='Visualization' Status='Visible' Id='0' Name='cylinder-0_vis' FileName='Scenario/Tools/Brush/brush_halfs_col.vtp' Color='1.0 1.0 1.0' Opacity='1.0' Visibility='1' TextureFileName='Scenario/Textures/liver.jpg'>
+							</Model>
+							<Model Type='Collision' Status='Visible' Id='1' Name='cylinder-0_col' FileName='Scenario/Tools/Brush/brush_halfs_col.vtp' Color='1.0 1.0 1.0' Opacity='0.0' Visibility='0'>
+							</Model>
+						</Models>
+					</Element>
+				</Elements>
+			</Object>
+			<Object Type='Organ' Status='Visible' Id='3' Name='cylinder-2'>
+				<Elements>
+					<Element Type='Organ' Status='Visible' Id='0' Name='cylinder-2-el' Scale='1.0 1.0 1.0' Origin='0.0 0.0 0.0' Orientation='0.0 0.0 90.0' Position='0.0 -1.25 -6.0'>
+						<Models>
+							<Model Type='Visualization' Status='Visible' Id='0' Name='cylinder-2_vis' FileName='Scenario/Tools/Brush/brush_halfs_col.vtp' Color='1.0 1.0 1.0' Opacity='1.0' Visibility='1' TextureFileName='Scenario/Textures/liver.jpg'>
+							</Model>
+							<Model Type='Collision' Status='Visible' Id='1' Name='cylinder-2_col' FileName='Scenario/Tools/Brush/brush_halfs_col.vtp' Color='1.0 1.0 1.0' Opacity='0.0' Visibility='0'>
+							</Model>
+						</Models>
+					</Element>
+				</Elements>
+			</Object>
+			<Object Type='Tool' Status='Visible' Id='4' Name='cutter' Class='SingleChannel' Model='Cutter'>
+				<Elements>
+					<Element Type='Tool' Status='Visible' Id='0' Name='cutter_l_stick' Scale='1.0 1.0 1.0' Origin='0.0 1.0 -1.0' Orientation='0.0 0.0 0.0' Position='0.0 -1.0 7.0'>
+						<Models>
+							<Model Type='Visualization' Status='Visible' Id='0' Name='cutter_l_stick_vis' FileName='Scenario/Tools/Cutter/sl_halfs.vtp' Color='1.0 1.0 1.0' Opacity='1.0' Visibility='1' TextureFileName='Scenario/Textures/metal.jpg'>
+							</Model>
+						</Models>
+					</Element>
+					<Element Type='Tool' Status='Visible' Id='0' Name='cutter_r_stick' Scale='1.0 1.0 1.0' Origin='0.0 1.0 -1.0' Orientation='0.0 0.0 0.0' Position='0.0 -1.0 7.0' Color='1.0 1.0 1.0'>
+						<Models>
+							<Model Type='Visualization' Status='Visible' Id='0' Name='cutter_r_stick_vis' FileName='Scenario/Tools/Cutter/sr_halfs.vtp' Opacity='1.0' Visibility='1' TextureFileName='Scenario/Textures/metal.jpg' Color='1.0 1.0 1.0'>
+							</Model>
+						</Models>
+					</Element>
+					<Element Type='Tool' Status='Visible' Id='5' Name='cutter_blade' Scale='1.0 1.0 1.0' Origin='0.0 1.0 -1.0' Orientation='0.0 0.0 0.0' Position='0.0 -1.0 7.0' Color='1.0 1.0 1.0'>
+						<Models>
+							<Model Type='Visualization' Status='Visible' Id='0' Name='cutter_blade_vis' FileName='Scenario/Tools/Cutter/blade_halfs.vtp' Opacity='1.0' Visibility='1' TextureFileName='Scenario/Textures/aluminium.jpg' Color='1.0 1.0 1.0'>
+							</Model>
+							<Model Type='Collision' Status='Visible' Id='1' Name='cutter_blade_col' FileName='Scenario/Tools/Cutter/blade_halfs.vtp' Opacity='0.0' Visibility='0' Color='1.0 1.0 1.0'>
+							</Model>
+						</Models>
+					</Element>
+				</Elements>
+			</Object>
+			<Object Type='Tool' Status='Visible' Id='4' Name='CamTool' Class='SingleChannel' Model='Camera'>
+				<Elements>
+					<Element Type='Tool' Status='Visible' Id='0' Name='eball0' Scale='1.0 1.0 1.0' Origin='0.0 0.0 0.0' Orientation='0.0 0.0 0.0' Position='0.0 0.0 6.0'>
+						<Models>
+							<Model Type='Visualization' Status='Visible' Id='0' Name='ball0_vis' FileName='Scenario/Organs/ball_col.vtp' Color='0.0 1.0 0.0' Opacity='0.0' Visibility='0'>
+							</Model>
+							<Model Type='Collision' Status='Visible' Id='0' Name='ball0_col' FileName='Scenario/Organs/ball_col.vtp' Color='1.0 1.0 1.0' Opacity='0.0' Visibility='0'>
+							</Model>
+						</Models>
+					</Element>
+				</Elements>
+			</Object>
+		</Objects>
+	</Scenario>
+</Simulation>
