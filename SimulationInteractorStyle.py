@@ -100,9 +100,11 @@ class MyStyle(baseSCIS):
 				self.timer = timer = NailMovingTimer(self.parent)
 				timer.StartMoving()
 			elif key == 'Prior':
-				self.parent.AddToolInsertion(1)
+				if self.iren.GetShiftKey():
+					self.parent.AddToolInsertion(1)
 			elif key == 'Next':
-				self.parent.AddToolInsertion(-1)
+				if self.iren.GetShiftKey():
+					self.parent.AddToolInsertion(-1)
 
 			self.Lens.Update()
 
